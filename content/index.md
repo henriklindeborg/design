@@ -17,7 +17,7 @@ Henriks me-sida i kursen design
 
 [FIGURE src="image/me.jpg?w=500" class="right" caption="Bild på mig"]
 
-Jag heter Henrik Lindeborg, men brukar oftast kallas för Harpan. Harpan är ett smeknamn som har hängt med sedan i början utan gymnasiet, där jag gick estetisk linje med inrikting musik. Jag spelade sedan innan mycket gitarr och valde det som förstainstrument, men ville nu testa harpa och valde det som biinstrument. Det blev en massa strul med att fixa det här och för att göra en lång historia kort, så blev jag döpt till Harpan på någon fest.
+Jag heter Henrik Lindeborg, men brukar oftast kallas för Harpan. Harpan är ett smeknamn som har hängt med sedan i början utav gymnasiet, där jag gick estetisk linje med inrikting musik. Jag spelade sedan innan mycket gitarr och valde det som förstainstrument, men ville nu testa harpa och valde det som biinstrument. Det blev en massa strul med att fixa det här och för att göra en lång historia kort, så blev jag döpt till Harpan på någon fest.
 
 Jag håller mig aktiv till största delen av min vakna tid. På sommrarna så åker jag runt på festivaler, där jag oftast jobbar ideelt. Under vintern eller våren så händer det ofta att jag försvinner iväg utomlands och volonterar på bondgårdar. Men när jag väl är hemma i Lund, där jag nu mer bor, så passar jag på att träffa alla underbara vänner. Eller så drar jag ut och klättrar en runda.
 
