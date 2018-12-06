@@ -1,0 +1,138 @@
+/*!
+ * LESS version of the stylesheet for design kmom04-colorful.
+ *
+ * This stylesheet is for the design course and kmom02.
+ */
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@import url('https://fonts.googleapis.com/css?family=Heebo:300');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
+/**
+ * Font Awesome.
+ */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+// Internal self contained modules, save in directory module/.
+// @import "module/kmom01.less";
+@import "module/stylechooser.less";  // Just an example module
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+// @import "@desinax/responsive-menu/less/media-queries.less";
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+// @import "base/base_default.less";
+// @import "base/base.less";
+@import "base/base-kmom04.less";
+
+
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+
+@import "layout/kmom04.less";
+// // Default grid, change to fit your requirements.
+// @columnWidth:   30;
+// @gutterWidth:   10;
+// @columns:       24;
+// @gridType:      "float"; // "flex"
+
+
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+// @import "layout/layout_default.less";
+// @import "layout/responsive_default.less";
+// @import "layout/layout.less";
+// @import "layout/responsive.less";
+@import "layout/responsive-kmom03.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+
+// @bgColorHtml: #bbb;
+// @bgColorBody: #ddd;
+// @colorBody: #333;
+// @fontFamilyBody: 'Muli', sans-serif;
+
+/**
+ * My own settings, not currently in their own module.
+ */
+
+ @bgColorHtml: #d7f2ff;
+ @bgColorBody: #40b282;
+ @colorBody: #b23a25;
+ @fontFamilyBody: 'Alegreya', serif;
+ @fontFamilyHeadings: 'Bree Serif', serif;
+ @bgColorHeader: #b23a25;
+ @colorHeader: #a1ffd7;
+ @bgColorFooter: #b23a25;
+ @colorFooter: #a1ffd7;
+
+img:hover {
+    filter: hue-rotate(90deg);
+}
+
+.inner-wrap-header {
+    font-family: 'Cinzel', serif;
+}
+
+.inner-wrap-main {
+    background-color: inherit;
+}
+
+body {
+    background-image: radial-gradient(#a1ffd7, #40b282);
+}
+
+a {
+    color: #b23a25;
+}
+
+a:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+p:hover {
+    color: #9b9521;
+}
+
+ .row {
+     margin-bottom: 0;
+ }
