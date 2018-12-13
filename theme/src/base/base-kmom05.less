@@ -1,0 +1,56 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+@bgColorHtml: #bbb;
+@bgColorBody: #ddd;
+@colorBody: #333;
+// @fontFamilyBody: 'Muli', sans-serif;
+@fontFamilyBody: "Muli", "sans-serif";
+
+html {
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+body {
+    margin: 0 auto;
+    // width: 960px;
+    padding: 0;
+    color: @colorBody;
+    background-color: @bgColorBody;
+    // font: 100.01%/1 @fontFamilyBody;
+    #desinax-hgrid.font(@fontSizeBody);
+}
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
+
+
+header {
+    border: 1px solid black;
+}
+
+header li{
+    display: inline-block;
+    margin: 1em;
+}
+
+header a{
+    text-decoration: none;
+}
+
+main {
+    // padding: 10px;
+    min-height: 40em;
+    // background-color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
