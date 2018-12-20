@@ -1,5 +1,5 @@
 /*!
- * LESS version of the stylesheet for design kmom03.
+ * LESS version of the stylesheet for design kmom06-designelement.
  *
  * This stylesheet is for the design course and kmom02.
  */
@@ -311,8 +311,18 @@ template {
 [hidden] {
   display: none;
 }
-/**
-
+@font-face {
+  font-family: 'Krub';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Krub Regular'), local('Krub-Regular'), url(https://fonts.gstatic.com/s/krub/v2/sZlLdRyC6CRYbkEaCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fresca';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fresca-Regular'), url(https://fonts.gstatic.com/s/fresca/v7/6ae94K--SKgCzbMGHbcS.ttf) format('truetype');
+}
 /**
  * Font Awesome.
  */
@@ -4606,14 +4616,14 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 html {
   overflow-y: scroll;
-  background-color: #bbb;
+  background-color: #d7f2ff;
 }
 body {
   margin: 0 auto;
   padding: 0;
-  color: #333;
-  background-color: #ddd;
-  font: 16px/1.5 "Muli", "sans-serif";
+  color: #7aa689;
+  background-color: #bac6cc;
+  font: 16px/1.5 'Krub', sans-serif;
 }
 h1,
 h2,
@@ -4621,7 +4631,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "serif";
+  font-family: "Fresca", sans-serif;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -4951,7 +4961,7 @@ img {
      */
 }
 /**
- * Layout style for using vgrid in kmom03.
+ * Layout style for using vgrid in kmom05.
  */
 .row {
   display: block;
@@ -4998,7 +5008,7 @@ img {
   display: none;
 }
 .outer-wrap.outer-wrap-header {
-  background-color: #111;
+  background-color: #1d3325;
 }
 .inner-wrap.inner-wrap-header {
   margin-right: auto;
@@ -5023,6 +5033,7 @@ img {
   width: 57.29166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 /**
 * Navbar layout
@@ -5036,6 +5047,9 @@ img {
 /**
 * Flash layout
  */
+.inner-wrap-flash {
+  display: none;
+}
 .region-flash {
   display: inline;
   float: left;
@@ -5046,6 +5060,9 @@ img {
 /**
 * Breadcrumb layout
  */
+.outer-wrap-breadcrumb {
+  display: none;
+}
 .region-breadcrumb {
   display: inline;
   float: left;
@@ -5122,8 +5139,8 @@ img {
 * Footer layout
  */
 .outer-wrap.outer-wrap-footer {
-  background-color: #444;
-  color: #fd0;
+  background-color: #62686b;
+  color: #7aa689;
 }
 .column.footer-column {
   display: inline;
@@ -5302,5 +5319,152 @@ img {
   color: #111;
 }
 /**
+ * Theme/figure
+ */
+/**
+ * Figure with ASCIINEMA
+ */
+/**
+ * Figure with Codepen
+ */
+/** --------------------------------------------------------------
+ * Figure through .figure
+ */
+figure.figure,
+figure.asciinema,
+figure.codepen,
+figure.figure-codepen {
+  display: table;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  /* Chrome shinks images in td */
+  /* Position the images */
+}
+figure.figure img {
+  max-width: 100%;
+  display: block;
+}
+figure.figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 12px;
+}
+figure.figure figcaption p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}
+figure.figure td img {
+  max-width: none;
+}
+figure.figure.center {
+  clear: both;
+  margin: auto;
+}
+figure.figure.center figcaption {
+  text-align: center;
+}
+figure.figure.left {
+  float: left;
+  margin-right: 0.5em;
+}
+figure.figure.right {
+  float: right;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 963px) {
+  figure.figure.left.w67,
+  figure.figure.right.w67 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w67 img,
+  figure.figure.right.w67 img {
+    width: 962.5px;
+  }
+}
+@media screen and (max-width: 733px) {
+  figure.figure.left.w50,
+  figure.figure.right.w50 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w50 img,
+  figure.figure.right.w50 img {
+    width: 733.33333333px;
+  }
+}
+@media screen and (max-width: 688px) {
+  figure.figure.left.w40,
+  figure.figure.right.w40 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w40 img,
+  figure.figure.right.w40 img {
+    width: 687.5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  figure.figure.left.w33,
+  figure.figure.right.w33 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w33 img,
+  figure.figure.right.w33 img {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 367px) {
+  figure.figure.left.w25,
+  figure.figure.right.w25 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w25 img,
+  figure.figure.right.w25 img {
+    width: 366.66666667px;
+  }
+}
+figure.asciinema {
+  display: block;
+}
+figure.asciinema figcaption {
+  display: block;
+}
+figure.asciinema .asciicast {
+  margin: 0 !important;
+}
+figure.codepen,
+figure.figure-codepen {
+  width: 100%;
+}
+/**
  * My own settings, not currently in their own module.
  */
+body {
+  background-image: radial-gradient(#42594a, #090d0b);
+}
+a {
+  color: #fff;
+}
+.outer-wrap-header,
+.outer-wrap-footer {
+  background-image: linear-gradient(#090d0b, #1d3325, #090d0b);
+}
+.inner-wrap-main {
+  background-color: rgba(9, 13, 11, 0.2);
+}
+.byline {
+  background-color: #1d3325;
+}
+.row {
+  margin-bottom: 0;
+}

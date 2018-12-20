@@ -13,7 +13,8 @@ views:
 ---
 Henriks me-sida i kursen design
 =========================
-
+<div class="index-leaf"><img src="img/theme/leaf_256x256.png" class="spin"></div>
+<div class="arrow"></div>
 
 [FIGURE src="image/me.jpg?w=500" class="right" caption="Bild på mig"]
 

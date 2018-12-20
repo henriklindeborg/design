@@ -1,0 +1,262 @@
+/*!
+ * LESS version of the stylesheet for design kmom06-designprinciper.
+ *
+ * This stylesheet is for the design course and kmom02.
+ */
+
+/**
+* Normalize and reset the style.
+*/
+@import "normalize.css/normalize.less";
+
+@import url('https://fonts.googleapis.com/css?family=Krub');
+@import url('https://fonts.googleapis.com/css?family=Fresca');
+
+/**
+ * Font Awesome.
+ */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+// Internal self contained modules, save in directory module/.
+// @import "module/kmom01.less";
+@import "module/stylechooser.less";  // Just an example module
+
+/**
+* A responsive menu.
+*/
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+// @import "@desinax/responsive-menu/less/media-queries.less";
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+// @import "base/base_default.less";
+// @import "base/base.less";
+@import "base/base-kmom05.less";
+
+
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+
+@import "layout/kmom06.less";
+// // Default grid, change to fit your requirements.
+// @columnWidth:   30;
+// @gutterWidth:   10;
+// @columns:       24;
+// @gridType:      "float"; // "flex"
+
+
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+// @import "layout/layout_default.less";
+// @import "layout/responsive_default.less";
+// @import "layout/layout.less";
+// @import "layout/responsive.less";
+@import "layout/responsive-kmom03.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+/**
+ * Theme/figure
+ */
+@import "@desinax/figure/less/asciinema.less";
+@import "@desinax/figure/less/codepen.less";
+@import "@desinax/figure/less/figure.less";
+
+
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+
+
+@bgColorHtml: #d7f2ff;
+@bgColorBody: #bac6cc;
+@colorBody: #7aa689;
+@fontFamilyBody: 'Krub', sans-serif;
+@fontFamilyHeadings: "Krub", sans-serif;
+@bgColorHeader: #1d3325;
+@colorHeader: #fd0;
+@bgColorFooter: #62686b;
+@colorFooter: #7aa689;
+
+/**
+ * My own settings, not currently in their own module.
+ */
+html {
+    background-image: url(../../htdocs/image/sacred_geometry.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    // background-image: url(../../htdocs/image/sacred_geometry.jpg);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    // color: #42594a;
+    color: #fff;
+}
+
+// img:hover {
+//     filter: blur(2px);
+// }
+
+// .outer-wrap-header {
+//     position: fixed;
+//     width: 100%;
+// }
+
+.region-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(rgba(9, 13, 11, 0.9),rgba(29, 51, 37, 0.9),rgba(9, 13, 11, 0.9));
+    box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.9);
+}
+
+.outer-wrap-header,
+.outer-wrap-footer {
+ background-image: linear-gradient(rgba(9, 13, 11, 0.9),rgba(29, 51, 37, 0.9),rgba(9, 13, 11, 0.9));
+ box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.9);
+}
+
+.rm-desktop a {
+    overflow: hidden;
+    position: relative;
+
+    span {
+        z-index: 20;
+    }
+
+    &:after {
+        background: #fff;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -10;
+    };
+}
+
+.rm-desktop a:hover {
+    &:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+
+.outer-wrap-main {
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+
+.route-
+.inner-wrap-main {
+    margin-top: 100vh;
+}
+
+.inner-wrap-main {
+    background-color: rgba(9, 13, 11, 0.8);
+    // margin-top: 100vh;
+    padding: 1em;
+    box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.9);
+}
+
+.byline {
+    background-color: #1d3325;
+    margin-bottom: 1em;
+}
+
+ .row {
+     margin-bottom: 0;
+ }
+
+ .index-leaf {
+     position: absolute;
+     left: 42.5vw;
+     top: 40vh;
+ }
+
+.arrow {
+    animation: MoveUpDown 3s ease-in-out infinite;
+    position: absolute;
+    bottom: 6vh;
+    left: 48vw;
+    width: 0;
+    height: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vw solid rgba(255, 221, 0, 0.7);
+    z-index: -1;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: 6vh;
+    }
+    50% {
+        bottom: 4vh;
+    }
+}
+
+//spinning effect
+.spin {
+    -webkit-animation: rotation 4s infinite linear;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
